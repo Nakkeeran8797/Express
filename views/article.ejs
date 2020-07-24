@@ -1,0 +1,118 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<style>
+/*
+Author: Konrad Kurkowski
+http://kurkowski.hpark.pl
+30.10.2017
+*/
+hr{
+    border-top: 1px solid #000 !important;
+}
+
+.row{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.comment{
+    margin-right: 20px;
+    margin-left: 20px; 
+    margin-bottom: 30px;
+}
+
+.head{
+    margin-bottom: 10px;
+}
+
+.user{
+    margin-right: 10px;
+}
+</style>
+<script>
+    $(document).on('click', '#addacomment', function(){
+    $('#addcomment').toggle();
+});
+</script>
+</head>
+<body>
+<div class="container">
+	
+
+
+ <div class="container-fluid col-sm-12" id="mainform">
+ 
+            <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                                                           
+                        <div class="panel-body" >
+                            <form class="form-horizontal" role="form" method="post" action="/article">
+                                <% if (message.length > 0) { %>
+                                      <div class="alert alert-success col-sm-12"><%= message %></div>
+                                <% } %>
+                                <div id="signupalert" style="display:none" class="alert alert-danger">
+                                    <p>Error:</p>
+                                    <span></span>
+                                </div>
+
+                                  <div class="form-group">
+                                    <label for="first_name" class="col-md-11">Write a Post</label>
+                                    <div style="display:none" class="col-md-1">
+                                        <input type="text" class="form-control firstname" name="title" placeholder="First Name" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="first_name" class="col-md-3 control-label">title</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control firstname" name="title" placeholder="First Name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last_name" class="col-md-3 control-label">content</label>
+                                    <div class="col-md-9">
+                                        <textarea rows="9" cols="9" class="form-control lastname" name="content" placeholder="Your Blog Content" required ></textarea>
+                                    </div>
+                                </div>
+                                                                                                <div class="form-group">
+                                    <label for="mob_no" class="col-md-3 control-label">author</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control mobile" name="author" placeholder="Your name" required >
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <!-- Button -->                                       
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button id="btn-signup" type="submit" class="btn btn-info signup"> send </button>
+                                    </div>
+                                </div>
+
+                        
+                            </form>
+                         </div>
+                    </div> 
+         </div>
+    </div>
+   
+	<hr>
+     <a class="btn btn-info center-block" href="/individual" >See the Blogs</a>
+     <br>
+
+	<div class="row comment">
+	    <div class="head">
+	        <small><strong class='user'>Recent Posts</strong> 30.10.2017 12:13</small>
+	    </div>    
+	    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non lorem elementum, accumsan magna sed, faucibus mauris. Nulla pellentesque ante nibh, ac hendrerit ante fermentum sed. Nunc in libero dictum, porta nibh pellentesque, ultrices dolor. Curabitur nunc ipsum, blandit vel aliquam id, aliquam vel velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed sit amet mi dignissim, pretium justo non, lacinia libero. Nulla facilisi. Donec id sem velit. </p>
+	</div>
+	<hr>
+</div>
+
+</body>
+</html>

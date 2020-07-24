@@ -1,0 +1,77 @@
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+</tbody>
+<html>
+<head>
+<title>Blogs</title>
+</head>
+<style>
+    html {
+    background-color: #f2f2f2;
+}
+
+body {
+  color: #444;
+  font-family: 'Palatino', serif;
+}
+
+a:link, a:visited {
+  color: #444;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Avenir Next', sans-serif;
+}
+
+article {
+  max-width: 400pt;
+  margin: 0 auto;
+}
+article p {
+  font-size: 16pt;
+  line-height: 22pt;
+}
+.article-divider {
+  border: 1px solid #111;
+  text-align: center;
+}
+
+</style>
+<body>
+<header>
+  <h1>
+    A Blog
+  </h1>
+  <p>
+    About | Privacy | Terms
+  </p>
+</header>
+
+<hr>
+<article>
+<% articles.forEach(function(user){ %>
+  <h1>
+    <%= user.title %>
+  </h1>
+  <p>
+  <%= user.content %>
+  </p>
+   <p>
+  <small>- <%= user.author %></small>
+  </p>
+  <% }); %>
+  <hr class="article-divider">
+</article>
+
+</body>
+</html>
+

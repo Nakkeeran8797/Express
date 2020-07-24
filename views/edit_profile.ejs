@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Site</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+</head>
+<body>
+
+  <div class="container-fluid">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/home/dashboard">Home</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/home/logout">Logout</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div><!--/.container-fluid -->
+    </nav>
+
+      
+<div class="row">
+    
+       <div class="panel-body">
+          <div class="row">
+            <div class=" col-md-12 col-lg-12"> 
+              <table class="table table-user-information">
+                <tbody>
+                  <tr>
+                    <td>User Name:</td>
+                    <td contenteditable="true" name="ename" ><%=data[0].user_name%></td>
+                  </tr>
+                  <tr>
+                    <td>Mobile:</td>
+                    <td contenteditable="true" name="emobile"><%=data[0].mob_no%></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a href="/edit">Save</a>
+            </div>
+          </div>
+        </div>
+</div>

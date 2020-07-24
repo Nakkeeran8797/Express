@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Site</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    
+</head>
+<body>
+    <div class="container-fluid col-sm-12" id="mainform">
+            <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                                                           
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">Try to OTP Login</div>
+                            <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="/">Sign In</a></div>
+                        </div> 
+                        <div class="panel-body" >
+                            <form class="form-horizontal" role="form" method="post" action="/signup" onSubmit="return checkblank(this);">
+                                
+                                <div class="form-group">
+                                    <label for="mob_no" class="col-md-3 control-label">Mail Address</label>
+                                    <div class="col-md-9">
+                                        <input type="number" class="form-control" name="mob_no" placeholder="Mail Address">
+                                    </div>
+                                </div>
+ 
+                                <div class="form-group">
+                                    <!-- Button -->                                       
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> Get OTP</button>
+                                        
+                                    </div>
+                                </div>
+                               
+                            
+                            </form>
+                         </div>
+                    </div>
+              
+                
+         </div>
+    </div>
+   
+</body>
+</html>
+ 
